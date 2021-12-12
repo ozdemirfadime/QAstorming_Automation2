@@ -1,0 +1,4 @@
+steps/CommonSteps.class
+steps/ProductPageSteps.class
+steps/HomeSteps.class
+steps/CartPageSteps.class
