@@ -139,4 +139,7 @@ public class Utilities extends Driver {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0,document.bosy.scrollHeight)");
     }
+
+    @Override
+    public void iconShoppingCart() {}
 }

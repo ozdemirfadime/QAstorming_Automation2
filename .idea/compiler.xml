@@ -9,5 +9,8 @@
         <module name="GetirAutomationHomework_2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="GetirAutomationHomework_2" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

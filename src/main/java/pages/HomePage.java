@@ -18,9 +18,9 @@ public class HomePage extends Utilities {
     public List<WebElement> topMenuCard;
 
 
-    public void checkHomePage() {
+    public void checkHomepageOrNot() {
         String ActualPage = driver.getCurrentUrl();
-        String ExpectedPage = "https://training.qastorming.com/shop/";
+        String ExpectedPage = "https://training.qastorming.com/";
         Assert.assertEquals(ActualPage, ExpectedPage);
     }
 

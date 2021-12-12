@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -37,11 +36,11 @@ public class DriverFactory {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("disable-notifications");
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver 2");
+                System.setProperty("webdriver.chrome.driver","src/main/resources/drivers/chromedriver");
                 driver = new ChromeDriver(chromeOptions);
                 break;
         }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         return driver;
     }

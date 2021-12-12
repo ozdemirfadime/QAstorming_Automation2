@@ -9,10 +9,7 @@ public class HomeSteps {
 
     HomePage homePage = new HomePage();
 
-    @Given("Check to go to homepage or not ")
-    public void checkHomePage() {
-        homePage.checkHomePage();
-    }
+
 
     @Given("Click the {} button on the banner")
     public void clickShopNowButton(String buttonName) {
@@ -20,4 +17,6 @@ public class HomeSteps {
     }
 
 
+    @Given("Check to go to homepage or not")
+    public void checkHomepageOrNot() { homePage.checkHomepageOrNot();}
 }

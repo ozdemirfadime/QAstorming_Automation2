@@ -12,4 +12,6 @@ public abstract class Driver extends WebComponent {
     public void terminate(){driver.quit();}
 
     public abstract void scrollPageDown();
+
+    public abstract void iconShoppingCart();
 }
