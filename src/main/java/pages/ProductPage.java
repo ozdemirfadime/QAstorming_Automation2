@@ -19,13 +19,24 @@ public class ProductPage extends Utilities {
     public List<WebElement> viewCart;
 
     @FindBy(css = "[class*='.tg-icon-shopping-cart']")
-    public List<WebElement> iconShoppingCart;
+    public WebElement iconShoppingCart;
 
     public void checkProductPage() {
         String ActualPage = driver.getCurrentUrl();
         String ExpectedPage = " https://training.qastorming.com/shop/";
-        Assert.assertEquals(ActualPage,ExpectedPage);
-
+        Assert.assertEquals(ActualPage, ExpectedPage);
 
     }
-}
+
+   /* public void clickAddToCart(String firstAddToCard) {
+        for (WebElement card : addToCart) {
+            if (card.getText().equalsIgnoreCase(firstAddToCard)) {
+                clickElement(card);
+                return;
+            }
+        } */
+
+        public void clickShoppingCartIcon(){ iconShoppingCart.click();}
+    }
+
+

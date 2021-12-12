@@ -23,6 +23,10 @@ public class Utilities extends Driver {
         centerElement(element).click();
     }
 
+    public void navigate(String url) {
+        driver.get(url);
+    }
+
     public WebElement waitForElementVisibility(WebElement element, Long initialTime) {
         return null;
     }
@@ -71,9 +75,7 @@ public class Utilities extends Driver {
     }
 
 
-    public void navigate(String url) {
-        driver.get(url);
-    }
+
 
     public void predeterminedNavigate(String pageName) {
         Properties properties = new Properties();
