@@ -23,8 +23,20 @@ public class Utilities extends Driver {
         centerElement(element).click();
     }
 
+
     public void navigate(String url) {
         driver.get(url);
+    }
+
+
+    public void scrollPageDown() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+    }
+
+
+    @Override
+    public void iconShoppingCart() {
     }
 
     public WebElement waitForElementVisibility(WebElement element, Long initialTime) {
@@ -73,8 +85,6 @@ public class Utilities extends Driver {
     public void fillInput(String input, WebElement inputElement) {
         inputElement.sendKeys(input);
     }
-
-
 
 
     public void predeterminedNavigate(String pageName) {
@@ -133,13 +143,6 @@ public class Utilities extends Driver {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         return element;
     }
-
-    @Override
-    public void scrollPageDown() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0,document.bosy.scrollHeight)");
-    }
-
-    @Override
-    public void iconShoppingCart() {}
 }
+
+
