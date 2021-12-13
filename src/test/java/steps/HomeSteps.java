@@ -29,8 +29,8 @@ public class HomeSteps {
     @Given("Scroll up the page then check there is top of page or not")
     public void ScrollPageUp(){homePage.ScrollPageUp();}
 
-
-
+    @Given("Click menu item called {}")
+    public void clickMenuElement(String itemName){ homePage.clickMenuElement(itemName);}
 
 
 

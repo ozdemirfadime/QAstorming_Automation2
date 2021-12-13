@@ -17,8 +17,8 @@ public class HomePage extends Utilities {
     @FindBy(xpath = "//span[text() ='SHOP NOW']")
     public WebElement ShopNowButton;
 
-    @FindBy(css = "[class*='menu-primary']")
-    public List<WebElement> topMenuCard;
+    @FindBy(css = "[id='site-navigation'] li ")
+    public List<WebElement> menuCards;
 
     @FindBy(xpath = "//h2[text()='CONTACT INFO']")
     public WebElement contactInfo;
@@ -48,12 +48,22 @@ public class HomePage extends Utilities {
     }
     public void ScrollPageUp(){
         scrollUp.click();
+
         if (topSite.isDisplayed()) {
             System.out.println(" Page Header element visible on the top of  page ");
         }
         else {Assert.fail(" Page Header element doesnt visible on the top of page");}
 
+    }
 
+    public void clickMenuElement(String itemName){
+        for (WebElement menuElement:menuCards) {
+            if (menuElement.getText().equalsIgnoreCase(itemName)){
+                clickElement(menuElement);
+                return;
+            }
+        }
+        Assert.fail("No menu item called "+itemName+" could be located on the navigation bar.");
     }
 
 }
