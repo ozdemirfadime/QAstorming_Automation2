@@ -30,6 +30,7 @@ public class ProductPageSteps {
         productPage.clickAddToCart(1);
         productPage.clickAddToCart(2);
     }
+
     @Given("Click any View Cart button for has been added first 3 product on the product page")
     public void clickViewCart() {productPage.clickViewCart(0); }
 

@@ -1,5 +1,4 @@
 package steps;
-
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import pages.CartPage;
@@ -24,5 +23,11 @@ public class CartPageSteps {
 
     @Given("Remove this products in shopping cart then check warning message as Your cart is currently empty")
     public void clearCartPage() throws IOException {cartPage.clearCartPage();}
+
+    @Given("Find product cost as most expensive and cheapest")
+    public void findProductCost() {cartPage.findProductCost();}
+
+
+
 
 }

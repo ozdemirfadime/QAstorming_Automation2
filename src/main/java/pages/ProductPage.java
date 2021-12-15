@@ -12,7 +12,8 @@ public class ProductPage extends Utilities {
     @FindBy(css = "[class*='woocommerce-LoopProduct-link']")
     public List<WebElement> productList;
 
-    @FindBy(css = "[class*='add_to_cart_button']")
+   // xpath = " //a[text()='Add to cart']")
+   @FindBy(css = "[class*='add_to_cart_button']")
     public List<WebElement> addToCart;
 
     @FindBy(css = "[class*='added_to_cart']")
@@ -37,7 +38,10 @@ public class ProductPage extends Utilities {
 
     public void clickAddToCart(int firstAddToCard) {
         addToCart.get(0).click();
-    } //addToCart.get(1).click();
+        addToCart.get(1).click();
+        addToCart.get(2).click();
+
+    }
 
     public void clickSortProductOnDropDown(String sortingName) {
         for (WebElement sortElement : orderByProduct) {
@@ -49,11 +53,15 @@ public class ProductPage extends Utilities {
         Assert.fail("No dropdown item called " + sortingName + " could be located on the dropdown.");
     }
 
-    public void clickFirstThreeAddToCart() {
-        addToCart.get(0).click();
-        addToCart.get(1).click();
-        addToCart.get(2).click();
-    }
+
+    public void clickFirstThreeAddToCart(int firstAddToCard) {
+            addToCart.get(0).click();
+            addToCart.get(1).click();
+            addToCart.get(2).click();
+
+        }
+
+
 
     public void clickViewCart(int viewCard) {
         viewCart.get(0).click();

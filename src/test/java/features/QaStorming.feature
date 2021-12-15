@@ -37,12 +37,15 @@ Feature: QaStorming Feature
     * Check to go to Products page
     * Wait for 1
     * Sort product as Sort by latest
-    * Wait for 1
-    * Click the Add to Cart button for the first 3 product on the product page
     * Wait for 3
+    * Click the Add to Cart button for the first 3 product on the product page
+    * Wait for 4
     * Click any View Cart button for has been added first 3 product on the product page
-    * Wait for 1
+    * Wait for 3
     * Check this product has been added to shopping cart or not
+    * Find product cost as most expensive and cheapest
+
+
 
 
 

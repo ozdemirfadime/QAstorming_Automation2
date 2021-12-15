@@ -9,6 +9,12 @@ import utils.Utilities;
 
 import java.io.IOException;
 import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+import static java.util.Collections.*;
 
 public class CartPage extends Utilities {
 
@@ -16,8 +22,9 @@ public class CartPage extends Utilities {
     @FindBy(css = "[name ='update_cart']")
     public WebElement updateCartButton;
 
-    @FindBy(css = "[class*='woocommerce-cart-form']")
-    public WebElement shopTable;
+   // @FindBy(css = "[class='shop_table']")
+   @FindBy(css = "[class*='woocommerce-cart-form']")
+   public WebElement shopTable;
 
     @FindBy(css = "[inputmode ='numeric']")
     public WebElement productQuantity;
@@ -35,8 +42,10 @@ public class CartPage extends Utilities {
     @FindBy(css = "[class*='cart-empty']")
     public WebElement emptyCard;
 
+    @FindBy(css = "td[class ='product-price']  bdi")
+    public List<WebElement> productPrice;
 
-    public void checkAddedProduct() { shopTable.isDisplayed();}
+    public void checkAddedProduct(){shopTable.isDisplayed();}
 
     public void increaseQuantity(String number ){
         productQuantity.sendKeys(Keys.CONTROL + "a");
@@ -64,8 +73,20 @@ public class CartPage extends Utilities {
         }
     }
 
+    public void findProductCost() {
+
+        for (WebElement productPrices : productPrice) {
+
+            System.out.println(productPrices);
+
+        }
+    }
 
 
-}
+    }
+
+
+
+
 
 
